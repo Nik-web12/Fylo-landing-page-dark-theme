@@ -42,9 +42,15 @@ input:focus:not(:focus-visible) {
 
 button{
     border: none;
-    outline: none;
     background: linear-gradient(to right, $Cyan,$Blue);
     color: $text-color;
+    cursor: pointer;
+    font-family: $raleway;
+    &:hover{
+        transform: scale(0.98);
+        transition: .7s;
+        cursor: pointer;
+    }
 }
 
 li,a{
@@ -63,12 +69,6 @@ p{
 button{
     cursor: pointer;
     border: none;
-    outline: none;
     font-family: $raleway;
-    &:hover{
-        transform: scale(0.98);
-        transition: .7s;
-        cursor: pointer;
-    }
 }
 
