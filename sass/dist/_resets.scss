@@ -31,12 +31,13 @@ li{
 input{
     border: none;
 }
+
 input:focus-visible{
-        outline: 3px dotted $text-color;
-        outline-offset: 0.25rem;
+    outline: 3px dotted $Cyan;
+    outline-offset: 0.25rem;
 }
 input:focus:not(:focus-visible) {
-	outline: transparent;
+    outline: transparent;
 }
 
 button{
