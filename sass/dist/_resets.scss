@@ -1,0 +1,67 @@
+@import "./variables";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $DarkBlue2;
+}
+
+img{
+    width: 100%;
+}
+a{
+    color: $text-color;
+    text-decoration: none;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, $Cyan,$Blue);
+    color: $text-color;
+}
+
+li,a{
+    font-family: $raleway;
+}
+
+h1,h2,h3,h4{
+    font-family: $raleway;
+}
+
+p{
+    font-family: $openSans;
+    font-weight: 400;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: $raleway;
+    &:hover{
+        transform: scale(0.98);
+        transition: .7s;
+        cursor: pointer;
+    }
+}
+

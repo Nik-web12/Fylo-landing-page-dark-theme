@@ -1,0 +1,649 @@
+@import "./variables";
+@import "./resets";
+@import "./globals";
+@import "./mixins";
+@import "./_animation";
+@import "./_footerMediaQueries";
+
+
+
+
+
+
+.fylo__header{
+    background-color: $DarkBlue1;
+
+}
+
+.navbar{
+    @include flex(row,center,space-between);
+    padding: 72.5px 0px;
+    @include breakpoint (720px){
+        padding: 45px 10px;
+    }
+    .nav__logo{
+        @include breakpoint (720px){
+            width: 25%
+        }   
+    } 
+}
+
+.menu__nav{
+       ul{
+          @include flex(row,center,none);
+       }
+       li{
+           padding-top: 5px;
+           margin-left: 58px;
+           color: rgb(236, 226, 226);
+           @include breakpoint (720px){
+            margin-left: 30px;
+           }
+           @include breakpoint (500px){
+            margin-left: 20px;
+            font-size: 14px;
+           }
+          @include breakpoint (400px){
+            margin-left: 15px;
+            font-size: 13px;
+           }
+       }
+        li::after{
+            content: "";
+            display: block;
+            align-items: center;
+            width: 0%;
+            border-bottom: 2px dashed $text-color;
+            padding-top: 5px;
+            transition: .3s ease-in;
+            
+        }
+        li:hover::after{
+            width: 100%;
+        }
+    }    
+
+
+// ===============================================
+
+main{
+    background-color: $DarkBlue1;
+    .intro__img{
+        @include breakpoint (1200px){
+            padding: 0px 15px;
+        }    
+    }   
+}
+
+
+
+
+.main__intro{
+    background-image: url(/images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-bottom: 165px;
+    @include breakpoint (1200px){
+        padding-bottom: 100px;
+    }
+    @include breakpoint (1024px){
+        padding-bottom: 50px;
+    }
+    @include breakpoint (840px){
+        padding-bottom: 20px;
+    }
+    @include breakpoint (720px){
+        background-image: url(/images/bg-curvy-mobile.svg);
+    }
+    @include breakpoint (530px){
+        padding-bottom: 0px;
+    }
+}
+
+.intro{
+    @include flex(column,center,center);
+}
+
+// .intro__img{
+    
+// }
+
+.intro__para{
+    text-align: center;
+    color: $text-color;
+    @include breakpoint (720px){
+        padding: 0px 40px;
+     }
+    h1{
+        max-width: 50rem;
+        margin: auto;
+        font-size: 2.5rem;
+        line-height: 1.5;
+        font-weight: 700;
+        margin-top: 30.5px;
+        word-spacing: 1px;
+        @include breakpoint(1024px){
+            font-size: 2.1rem;
+        }
+        @include breakpoint(720px){
+            font-size: 1.8rem;
+        }
+        @include breakpoint(480px){
+            font-size: 1.6rem;
+            padding: 0px 0px;
+        }
+        @include breakpoint(432px){
+            font-size: 1.4rem;
+            padding: 0px 0px;
+        }
+        @include breakpoint(395px){
+            font-size: 1.23rem;
+            padding: 0px 0px;
+        }
+    }
+    p{
+        max-width: 38rem;
+        margin: auto;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        padding-top: 32.5px;
+        @include breakpoint(1024px){
+            font-size: 1.1rem;
+        }
+        @include breakpoint(720px){
+            font-size: 0.9rem;
+            padding: 10px 30px;
+        }
+        @include breakpoint(480px){
+            font-size: 0.8rem;
+            padding: 10px 0px;
+        }
+    }
+    .intro__button{
+        margin-top: 32px;
+        padding: 18.5px 0px;
+        width: 35%;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        @include breakpoint(720px){
+            margin-top: 20px;
+            font-size: 14px;
+            width: 40%;
+            padding: 15px 0px;
+        }
+        @include breakpoint(580px){
+            width: 47%;
+        }
+        @include breakpoint(580px){
+            width: 58%;
+            padding: 15px 10px;
+        }
+    }
+}
+
+// ==============================================================================================
+
+
+.accessibility__sec{
+    background: $DarkBlue2;
+    @include flex(row,center,center);
+    @include breakpoint(1200px){
+        padding-top: 50px
+    }
+    @include breakpoint (1024px){
+        padding-top: 100px;
+    }
+    @include breakpoint (840px){
+        padding-top: 130px;
+    }
+}
+
+.accessibility__sec-flex{
+    @include flex(column,center,center);
+}
+
+.accessibility__sec-grid{
+    color: $text-color;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 145px;
+    grid-row-gap: 95px;
+    place-items: center;
+    text-align: center;
+    @include breakpoint (720px){
+        grid-template-columns: auto;
+    }
+    img{
+        padding-top: 2px;
+    }
+    h2{
+        font-size: 1.25rem;
+        padding-top: 23.5px;
+        padding-bottom: 10px;
+        @include breakpoint (950px){
+            font-size: 1rem;
+          }
+    }
+    p{
+        font-size: 0.88rem;
+        line-height: 1.5;
+        @include breakpoint (950px){
+            font-size: 0.7rem;
+          }
+    }
+}
+
+
+// ==============================================================================================
+
+
+
+
+.Stay__productive{
+    background: $DarkBlue2;
+    padding-top: 140px;
+}
+
+.Stay__productive-flex{
+    @include flex(row,center,none);
+    @include breakpoint(780px){
+        @include flex(column,none,none);
+    }
+}
+
+.stay__productive-img{
+    padding-left: 20px;
+    padding: 0px 20px;
+    width: 80%;
+    @include breakpoint(900px){
+        width: 100%;
+    }
+    @include breakpoint(780px){
+        width: 80%;
+        padding-bottom: 40px;
+    }
+}
+
+.stay__productive-headings{
+    padding: 0px 30px;
+    color: $text-color;
+    margin-bottom: -10px;
+    h3{
+        font-size: 2.5rem;
+        padding: 15px 0px;
+        line-height: 1.2;
+        @include breakpoint(1100px){
+            font-size: 1.8rem;
+        }
+        @include breakpoint(900px){
+            font-size: 1.5rem;
+        }
+        @include breakpoint(470px){
+            font-size: 1.2rem;
+        }
+        @include breakpoint(390px){
+            font-size: 0.95rem;
+        }
+    }
+    p{
+        padding: 10px 0px;
+        font-size: 1rem;
+        @include breakpoint(1100px){
+            font-size: 0.85rem;
+        }
+        @include breakpoint(1100px){
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+        @include breakpoint(780px){
+            padding-right: 100px;
+        }
+        @include breakpoint(470px){
+            padding-right: 30px;
+            font-size: 0.76rem;
+        }
+        @include breakpoint(370px){
+            padding-right: 0px;
+            font-size: 0.76rem;
+        }
+    }    
+    .para2{
+        margin-bottom: 15px;
+    }
+    span{
+        font-family: $openSans;
+        font-size: 1rem;
+        color: $Cyan;
+        border-bottom: 1px solid $Cyan;
+        padding-bottom: 5px;
+        ion-icon{
+            color: $text-color;
+            background: $Cyan;
+            font-size: 11px;
+            border-radius: 50%;
+            padding: 1px;
+            position: relative;
+            top: 1.3px;
+            left: 3px;
+        }
+    }
+}
+
+// ======================================
+
+.review__section{
+    background: $DarkBlue2;
+    padding-top: 100px;
+    @include flex(row,center,center);
+}
+
+.bg__quote{
+    width: 5%;
+    position: relative;
+    top: 16px;
+    right: 10px;
+    @include breakpoint (1024px){
+        width: 7%;
+    }
+    @include breakpoint (720px){
+        width: 8.5%;
+        top: 5px;
+        left: 4px;
+    }  
+}
+
+.review__grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 40px;
+    place-items: center;
+    @include breakpoint (1024px){
+        grid-template-columns: auto auto;
+        grid-row-gap: 40px;
+    }
+    @include breakpoint (720px){
+        grid-template-columns: auto;
+    }
+    .card-3{
+        @include breakpoint (1024px){
+          position: relative;
+          left: 60%;
+        }
+        @include breakpoint (720px){
+            left: 0;
+          }
+    }
+}
+
+
+
+.card{
+    z-index: 100;
+    background: $DarkBlue4;
+    color: $text-color;
+    padding-right:30px;
+    padding-left: 25px;
+    padding-top: 42px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow:  10px 6px 8px rgba(136, 135, 135, 0.041);
+    .card__para{
+        font-size: 0.89rem;
+        line-height: 1.5;
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+        @include breakpoint (1220px){
+            font-size: 0.69rem;
+        }
+        @include breakpoint (355px){
+            font-size: 0.6rem;
+        }
+    }
+}
+
+
+.profile{
+    @include flex(row,center,none);
+    padding-top: 23.5px;
+    .profile__img{
+        height: 25px;
+        width: 25px;
+        img{
+            border-radius: 50%;
+        }
+    }
+    .profile__name{
+        margin-left: 8px;
+        .name{
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding-bottom: 3px;
+            letter-spacing: 0.3px;
+            @include breakpoint (1220px){
+                padding-bottom: 1px;
+            }
+        }
+        .position{
+            font-size: 0.5rem;
+        }
+    }
+}    
+
+
+// ====================================
+
+.early__access{
+    background: $DarkBlue2;
+    margin-top: 80px;
+    @include breakpoint(720px){
+        margin-top: 0px;
+    }
+}
+
+.early__access-card{
+    position: relative;
+    top: 120px;
+    width: 67%;
+    margin: 0 auto;
+    background: $DarkBlue1;
+    color: $text-color;
+    padding: 46px 79px;
+    border-radius: 7px;
+    box-shadow:  10px 8px 6px rgba(2, 2, 2, 0.233);
+    @include breakpoint(1220px){
+        width: 75%;
+        padding: 46px 50px;
+    }
+    @include breakpoint(1024px){
+        width: 80%;
+        padding: 35px 30px;
+    }
+    @include breakpoint(840px){
+        width: 90%;
+        padding: 35px 30px;
+    }
+    @include breakpoint(500px){
+        width: 100%;
+        padding: 35px 20px;
+    }
+    .early__access-headings{
+        text-align: center;
+        h4{
+            font-size: 2rem;
+            padding-bottom: 21px;
+            @include breakpoint(1220px){
+                font-size: 1.7rem;
+            }
+            @include breakpoint(500px){
+                font-size: 1.1rem;
+            }
+        }
+        p{
+            font-size: 0.87rem;
+            padding: 0px 20px;
+            padding-bottom: 38px;
+            line-height: 1.5;
+            @include breakpoint(1220px){
+                font-size: 0.8rem;
+            }
+            @include breakpoint(720px){
+                padding-bottom: 25px;
+            }
+            @include breakpoint(435px){
+                font-size: 0.64rem;
+                line-height: 1.6;
+            }
+        }
+    }
+    .early__access-input{
+        form{
+            @include flex(row,center,center);
+            @include breakpoint(720px){
+                @include flex(column,center,none);
+            }
+            input{
+                width: 100%;
+                padding: 16px;
+                padding-left: 25px;
+                border-radius: 50px;
+                margin-right: 28px;
+                @include breakpoint(720px){
+                    margin-right: 0px;
+                    margin-bottom: 15px;
+                }
+                @include breakpoint(500px){
+                    padding: 14px;
+                }
+            }
+            button{
+                border-radius: 50px;
+                width: 43.5%;
+                font-weight: 600;
+                padding: 16px 0px;
+                @include breakpoint(720px){
+                    width: 100%;
+                }
+                @include breakpoint(500px){
+                    padding: 14px 0px;
+                }
+            }
+        }
+    }
+}
+
+// =========================================
+
+
+footer{
+    background: $DarkBlue3;
+    padding-left: 82px;
+    @include breakpoint(1200px){
+        padding-left: 20px;
+    }
+    .foot-head{
+        padding-top: 200px;
+        padding-bottom: 30px;
+        @include flex(row,none,none);
+    }
+    .logo-2{
+        filter: brightness(0) invert(1);
+    }
+}
+
+
+.foot-flex{
+    @include flex(row,none,none);
+    padding-bottom: 15px;
+    img{
+        padding-top: 4px;
+        padding-right: 20px;
+    }
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 66px;
+    color: $text-color;
+    padding-bottom: 30px;
+    a{
+        color: $text-color;
+        font-family: $openSans;
+    }
+}
+
+.add{
+    p{
+        padding-left: 3px;
+        line-height: 1.5;
+    }
+    // @include breakpoint(1024px){
+    //     padding-bottom: 30px;
+    // }
+}
+
+.about-us{
+    li{
+        padding-bottom: 16px;
+    }
+    & a:hover{
+        color: rgb(158, 158, 179);
+    }
+}
+
+.contact-us{
+    li{
+        padding-bottom: 16px;
+    }
+    & a:hover{
+        color: rgb(158, 158, 179);
+    }
+}
+
+.social-media-icon{
+    ion-icon{
+        font-size: 17px;
+    }
+    ul{
+        @include flex(row,none,none);
+    }
+    li{
+        margin: 0px 7px;
+        border: 1px solid $text-color;
+        border-radius: 50px;
+        padding: 5px 5px;
+        padding-bottom: 1px;
+    }
+    & li:hover{
+        transform: translateY(-.3rem);
+        transition: .5s;
+    }
+    
+}
+
+// ============================================================
+
+
+
+.attribution{
+    padding: 7px 0px;
+    color: $text-color;
+    p{
+        font-size: 15px;
+        a{
+            color: $Cyan;
+        }
+        @include breakpoint(720px){
+            font-size: 13px;
+        }    
+    }
+    
+    @include breakpoint(1024px){
+        padding-left: 30px;
+    }
+    @include breakpoint(720px){
+        padding-left: 0px;
+    }
+}

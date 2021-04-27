@@ -1,0 +1,17 @@
+@import "./mixins";
+
+
+.container{
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0px 30px;
+    @include breakpoint (720px){
+        padding: 0px 10px;
+    }
+}
+
+.foot-container{
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
